@@ -1,0 +1,31 @@
+cogconfig.sh
+cogconfig.sh -stop
+cogconfig.sh -s
+
+
+Cognos Variables / Paths:
+
+#####Added by Ramesh#########
+export JAVA_HOME=/opt/ibm/cognos/analytics/ibm-jre/jre
+
+export PATH="$PATH:/opt/ibm/cognos/analytics/bin64"
+
+export JRE_HOME=/opt/ibm/cognos/analytics/ibm-jre/jre
+
+#export LD_LIBRARY_PATH=/opt/ibm/cognos/analytics/bin64:.:/usr/bin/:/opt/ibm/cognos/analytics/bin64
+
+source ~db2inst1/sqllib/db2profile
+#######END#######
+
+Cognos Sailent Install:
+On Windows, where location is the directory where you created or copied the response filename file:
+analytics-installer-2.0.<build>-win.exe -DREPO=<RepoZipPath> -f location\response_filename -i silent
+analytics-installer-2.0.win.exe -DREPO=\backup\cognos\casrvanalalytics-2.0.zip -f \backup\response_file.txt -i silent
+On UNIX or Linux®, where location is the directory where you created or copied the response filename file:
+analytics-installer-<build>-<platform>.bin -DREPO=<RepoZipPath> -f location/response_filename -i silent
+analytics-installer.bin -DREPO=/backup/cognos/casrvanalytics-2.0.zip -f /backup/response_file.txt -i silent
+If you wants to choose log file in specific langauge, use -l
+analytics-installer-2.0.win.exe -DREPO=\backup\cognos\casrvanalalytics-2.0.zip -f \backup\response_file.txt -l en -i silent
+analytics-installer.bin -DREPO=/backup/cognos/casrvanalytics-2.0.zip -f /backup/response_file.txt -l en -i silent
+en    English
+fr    French
